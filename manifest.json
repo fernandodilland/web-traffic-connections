@@ -1,0 +1,29 @@
+{
+  "manifest_version": 2,
+
+  "name": "Web Traffic Connections",
+  "description": "Displays the number of connections to which the web page is connected.",
+  "version": "0.0.4",
+
+  "background": {
+	"scripts": ["static/background.js"]
+  },
+  "icons": {
+    "16": "static/offline-16.png",
+    "48": "static/offline-48.png",
+    "128": "static/offline-128.png"
+  },
+  "browser_action": {
+    "default_icon": "static/offline.png",
+    "default_popup": "static/popup.html"
+  },
+  "permissions": [
+    "activeTab",
+	"webRequest",
+	"http://*/",
+	"https://*/"
+  ],
+  "web_accessible_resources": [
+    "static/offline.png", "static/connected.gif"
+  ]
+}
