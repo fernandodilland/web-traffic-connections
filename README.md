@@ -21,4 +21,4 @@ Features:
 
 ## License
 
-MIT
+[web-traffic-connections](https://github.com/fernandomireles/web-traffic-connections/) are released under [MIT license](https://github.com/fernandomireles/web-traffic-connections/blob/main/LICENSE) . Copyright (c) [Fernando Mireles](https://github.com/fernandomireles).
