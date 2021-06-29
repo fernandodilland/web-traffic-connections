@@ -21,4 +21,4 @@ Features:
 
 ## License
 
-MIT
+[web-traffic-connections](https://github.com/fernandodilland/web-traffic-connections/) are released under [MIT license](https://github.com/fernandodilland/web-traffic-connections/blob/main/LICENSE) . Copyright (c) [Fernando Dilland](https://github.com/fernandodilland).
