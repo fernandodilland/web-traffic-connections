@@ -4,11 +4,11 @@
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
 
-## Install (Chrome)
+## Install (Chrome/Edge)
 
 1. download zip file from github and uncompress to local.
 
-2. open Extensions from chrome.
+2. open Extensions (chrome://extensions) from chrome.
 
 3. Choose `Load unpacked`(Open Develop Mode first)，Click folder you just uncompressed, finish!
 
