@@ -8,7 +8,7 @@ function init() /*: void */ {
 	chrome.webRequest.onBeforeRequest.addListener(onBeforeRequest, filter);
 	chrome.webRequest.onCompleted.addListener(onRequestCompletedOrErrored, filter);
 	chrome.webRequest.onErrorOccurred.addListener(onRequestCompletedOrErrored, filter);
-	chrome.webNavigation.onCommitted.addListener(resetTabState, filter);
+	chrome.webNavigation.onCommitted.addListener(resetTabState, filter)
 }
 
 function onTabSwitch({ tabId /*: number */ }) /*: void */ {
