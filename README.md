@@ -1,4 +1,4 @@
-# Web Traffic Connections (Chrome/Edge Extension) V0.0.1
+# Web Traffic Connections (Chrome/Edge Extension)
 
 （Last Update Jun 29, 2021)
 
