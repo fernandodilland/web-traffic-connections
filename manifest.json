@@ -18,7 +18,6 @@
     "default_popup": "static/popup.html"
   },
   "permissions": [
-    "activeTab",
 	"webRequest",
 	"http://*/",
 	"https://*/"
