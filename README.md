@@ -1,6 +1,6 @@
 # Web Traffic Connections (Chrome/Edge Extension)
 
-（Last Update Jun 29, 2021)
+（Last Update July 7, 2021)
 
 [![Software License](https://img.shields.io/badge/license-MIT-brightgreen.svg)](LICENSE)
 
@@ -17,7 +17,12 @@
 `2021-06`
 
 Features:
-- Creation of the extension
+- Creation of the extension.
+
+`2021-07`
+
+Features:
+- An unnecessary permit was removed.
 
 ## License
 
