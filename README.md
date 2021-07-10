@@ -13,7 +13,7 @@
 3. Choose `Load unpacked`(Open Develop Mode first)，Click folder you just uncompressed, finish!
 
 **Microsoft Edge**: 
-[Install it directly from the Microsoft Store](https://microsoftedge.microsoft.com/addons/detail/web-traffic-connections/hjnhphaanpaikmjgekggoahgadlgnnnd)
+[Install it directly from the Microsoft Store](https://microsoftedge.microsoft.com/addons/detail/web-traffic-connections/hjnhphaanpaikmjgekggoahgadlgnnnd).
 
 ## Changelog
 
