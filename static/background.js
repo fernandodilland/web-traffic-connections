@@ -1,8 +1,8 @@
-const TAB_DB /*: { [tabId: number]: [number, number] } */ = new Map();
+const TAB_DB = new Map();
 
 init();
 
-function init() /*: void */ {
+function init() {
 	const filter = { urls: [ "<all_urls>" ] };
 	chrome.tabs.onActivated.addListener(onTabSwitch);
 	chrome.webRequest.onBeforeRequest.addListener(onBeforeRequest, filter);
@@ -11,23 +11,23 @@ function init() /*: void */ {
 	chrome.webNavigation.onCommitted.addListener(resetTabState, filter)
 }
 
-function onTabSwitch({ tabId /*: number */ }) /*: void */ {
-	const tabData /*: [number, number] */ = getTabData(tabId);
+function onTabSwitch({ tabId }) {
+	const tabData = getTabData(tabId);
 	updateView(tabData);
 }
 
-function onBeforeRequest({ tabId /*: number */ }) /*: void */ {
+function onBeforeRequest({ tabId }) {
 	incrementTabTimesCurrentlyDoing(tabId);
 	incrementTabTimesAlreadyDone(tabId);
 	conditionallyUpdateView(tabId);
 }
 
-function onRequestCompletedOrErrored({ tabId /*: number */ }) /*: void */ {
+function onRequestCompletedOrErrored({ tabId }) {
 	decrementTabTimesCurrentlyDoing(tabId);
 	conditionallyUpdateView(tabId);
 }
 
-function resetTabState({ tabId /*: number */ }) /*: void */ {
+function resetTabState({ tabId }) {
 	const newTabState = [0, 0];
 	TAB_DB.set(tabId, newTabState);
 	conditionallyUpdateView(tabId);
@@ -35,7 +35,7 @@ function resetTabState({ tabId /*: number */ }) /*: void */ {
 
 function conditionallyUpdateView(tabId) {
 	getCurrentlyViewedTabId()
-		.then(function(activeTabId /*: number */) {
+		.then(function(activeTabId ) {
 			if (activeTabId === tabId) {
 				const tabData = getTabData(tabId);
 				updateView(tabData);
@@ -43,7 +43,7 @@ function conditionallyUpdateView(tabId) {
 		});
 }
 
-function updateView([timesCurrentlyDoing /*: number */, timesAlreadyDone /*: number */]) /*: void */ {
+function updateView([timesCurrentlyDoing , timesAlreadyDone ]) {
 	chrome.browserAction.setBadgeText({ text: String(timesAlreadyDone) });
 	if (timesCurrentlyDoing > 0) {
 		chrome.browserAction.setIcon({ path: 'static/connected.gif' });
@@ -52,15 +52,15 @@ function updateView([timesCurrentlyDoing /*: number */, timesAlreadyDone /*: num
 	}
 }
 
-function getCurrentlyViewedTabId() /*: Promise<number> */ {
+function getCurrentlyViewedTabId() {
 	return new Promise(function(resolve) {
-		chrome.tabs.query({ active: true, lastFocusedWindow: true }, function([ { id /*: number */ } ]) {
+		chrome.tabs.query({ active: true, lastFocusedWindow: true }, function([ { id } ]) {
 			resolve(id);
 		});
 	});
 }
 
-function getTabData(tabId /*: number */) /*: [number, number] */ {
+function getTabData(tabId ) {
 	if (TAB_DB.has(tabId)) {
 		return TAB_DB.get(tabId);
 	}
@@ -69,17 +69,17 @@ function getTabData(tabId /*: number */) /*: [number, number] */ {
 	return tabData;
 }
 
-function incrementTabTimesCurrentlyDoing(tabId /*: number */) /*: void */ {
-	const tabData /*: [number, number] */ = getTabData(tabId);
+function incrementTabTimesCurrentlyDoing(tabId ) {
+	const tabData = getTabData(tabId);
 	tabData[0] += 1;
 }
 
-function decrementTabTimesCurrentlyDoing(tabId /*: number */) /*: void */ {
-	const tabData /*: [number, number] */ = getTabData(tabId);
+function decrementTabTimesCurrentlyDoing(tabId ) {
+	const tabData = getTabData(tabId);
 	tabData[0] -= 1;
 }
 
-function incrementTabTimesAlreadyDone(tabId /*: number */) /*: void */ {
-	const tabData /*: [number, number] */ = getTabData(tabId);
+function incrementTabTimesAlreadyDone(tabId ) {
+	const tabData = getTabData(tabId);
 	tabData[1] += 1;
 }
