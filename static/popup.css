@@ -1,0 +1,42 @@
+html {
+	box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+	box-sizing: inherit;
+}
+
+body {
+	font-family: arial;
+	font-size: .8em;
+	color: #ffffff;
+	min-width: 16em;
+	margin: .1em .75em;
+	background-color: #202020;
+}
+
+/* Custom header */
+
+.header {
+	background-color: #FFDF01;
+	color: black;
+	width: 200px;
+	height: 5px;
+	display: table-cell;
+    vertical-align: middle;
+}
+
+#options {
+	margin-bottom: .5em;
+}
+
+#options label {
+	margin-bottom: .75em;
+}
+
+#options label:after {
+	content: "";
+	display: block;
+	margin-bottom: .75em;
+}
