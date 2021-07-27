@@ -3,7 +3,7 @@
 
   "name": "Web Traffic Connections",
   "description": "Displays the number of connections to which the web page is connected.",
-  "version": "0.0.2",
+  "version": "1.0.0",
 
   "background": {
 	"scripts": ["static/background.js"]
